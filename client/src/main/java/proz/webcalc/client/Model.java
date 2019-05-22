@@ -1,6 +1,18 @@
 package proz.webcalc.client;
 
+import java.net.URI;
+
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Entity;
+import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
 import com.google.gson.Gson;
+
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 
 class Expression {
 	private String expression;
@@ -25,13 +37,48 @@ public class Model {
 	public String calculate (String expression) {
 		Gson gson = new Gson();
 		Expression exp = new Expression();
+		Result result;
 		exp.setExpression(expression);
-		String url = "";
+		String json = gson.toJson(exp);
 		
-		String expressionString = gson.toJson(exp);
+		//URI uri = URI.create("http://docker-proz123.apps.us-west-1.online-starter.openshift.com/");
+		URI uri = URI.create("http://localhost:9999/");
+		Client client = ClientBuilder.newClient();
 		
+		WebTarget webTarget = client.target(uri);
+		webTarget = webTarget.path("webcalc").path("calculate");
+
+		try {
+			Response response = webTarget.request(MediaType.APPLICATION_JSON).post(Entity.entity(json, MediaType.APPLICATION_JSON), Response.class);
+			
+			if(response.getStatus() != 200) {
+				Alert alert = new Alert(AlertType.ERROR);
+				alert.setTitle("Błąd działania programu");
+				alert.setHeaderText("Błąd komunikacji z serwerem");
+				alert.setContentText("Sprawdź swoje połączenie z Internetem.\nWyczyść pamięć kalkulatora przyciskiem AC.");
+				alert.showAndWait();
+				return "Błąd.";
+			}
+			
+			result = gson.fromJson(response.readEntity(String.class), Result.class);
+			
+		} catch (Exception e) {
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("Błąd działania programu");
+			alert.setHeaderText("Błąd komunikacji z serwerem");
+			alert.setContentText("Sprawdź swoje połączenie z Internetem.\nWyczyść pamięć kalkulatora przyciskiem AC.");
+			alert.showAndWait();
+			return "Błąd.";
+		}
 		
-		
-		return "aaa";
+		if(result.isError()) {
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("Błąd działania programu");
+			alert.setHeaderText("W trakcie obliczeń napotkano błąd");
+			alert.setContentText("Wyczyść pamięć kalkulatora przyciskiem AC.");
+			alert.showAndWait();
+			return "Błąd.";
+		}
+		return result.getResult();
 	}
 }
