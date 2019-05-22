@@ -1,0 +1,143 @@
+.numbers {
+	-fx-font-size: 15;
+	-fx-font-weight: bold;
+	-fx-font-family: "Segoe UI", sans-serif;
+	-fx-text-fill: "#FEFEFE";
+	-fx-alignment: center;
+	-fx-border-color: black;
+	-fx-border-width: 1;
+	-fx-background-color: "#333333";
+	-fx-background-radius: 5;
+}
+
+.numbers:hover {
+	-fx-background-color: "#3F3F3F";
+}
+
+.numbers:pressed {
+	-fx-background-color: "#2A2A2A";
+}
+
+.back {
+	-fx-background-color: "#000000";
+}
+
+.grid {
+	-fx-border-color: "#000000";
+	-fx-stroke: "#000000";
+	-fx-background-color: "#000000";
+	-fx-background-insets: 0, 1 1 0 0;
+	-fx-padding: 1;
+}
+
+.basicArithmetics {
+	-fx-font-size: 15;
+	-fx-font-weight: bold;
+	-fx-font-family: "Segoe UI", sans-serif;
+	-fx-text-fill: "#FEFEFE";
+	-fx-alignment: center;
+	-fx-border-color: black;
+	-fx-border-width: 1;
+	-fx-background-color: "#FF9501";
+	-fx-background-radius: 5;
+}
+
+.basicArithmetics:hover {
+	-fx-background-color: "#FEAD3F";
+}
+
+.basicArithmetics:pressed {
+	-fx-background-color: "#EB8801";
+}
+
+.clearButtons {
+	-fx-font-size: 15;
+	-fx-font-weight: bold;
+	-fx-font-family: "Segoe UI", sans-serif;
+	-fx-text-fill: "#FEFEFE";
+	-fx-alignment: center;
+	-fx-border-color: black;
+	-fx-border-width: 1;
+	-fx-background-color: "#FF0000";
+	-fx-background-radius: 5;
+}
+
+.clearButtons:hover {
+	-fx-background-color: "#FF2020";
+}
+
+.clearButtons:pressed {
+	-fx-background-color: "#D90000";
+}
+
+.equals {
+	-fx-font-size: 15;
+	-fx-font-weight: bold;
+	-fx-font-family: "Segoe UI", sans-serif;
+	-fx-text-fill: "#FEFEFE";
+	-fx-alignment: center;
+	-fx-border-color: black;
+	-fx-border-width: 1;
+	-fx-background-color: "#309A33";
+	-fx-background-radius: 5;
+}
+
+.equals:hover {
+	-fx-background-color: "#35AC38";
+}
+
+.equals:pressed {
+	-fx-background-color: "#2C8B2E";
+}
+
+.advancedArithmetic {
+	-fx-font-size: 15;
+	-fx-font-weight: bold;
+	-fx-font-family: "Segoe UI", sans-serif;
+	-fx-text-fill: "#FEFEFE";
+	-fx-alignment: center;
+	-fx-border-color: black;
+	-fx-border-width: 1;
+	-fx-background-color: "#2C829E";
+	-fx-background-radius: 5;
+}
+
+.advancedArithmetic:hover {
+	-fx-background-color: "#37A0C4";
+}
+
+.advancedArithmetic:pressed {
+	-fx-background-color: "#26728A";
+}
+
+.invertSign {
+	-fx-font-size: 15;
+	-fx-font-weight: bold;
+	-fx-font-family: "Segoe UI", sans-serif;
+	-fx-text-fill: "#FEFEFE";
+	-fx-alignment: center;
+	-fx-border-color: black;
+	-fx-border-width: 1;
+	-fx-background-color: "#DBD728";
+	-fx-background-radius: 5;
+}
+
+.invertSign:hover {
+	-fx-background-color: "#E3E05B";
+}
+
+.invertSign:pressed {
+	-fx-background-color: "#C8C422";
+}
+
+.resultDisplay {
+	-fx-background-color: "#FFFFFF";
+	-fx-background-radius: 5;
+	-fx-text-alignment: "right";
+}
+
+.displayText {
+	-fx-font-size: 18;
+	-fx-font-weight: bold;
+	-fx-font-family: "Segoe UI", sans-serif;
+}
