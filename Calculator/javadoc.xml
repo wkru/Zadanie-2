@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project default="javadoc">
-    <target name="javadoc">
-        <javadoc access="private" additionalparam=" --module-path &quot;C:\Program Files\Java\javafx-sdk-12\lib&quot;" author="true" classpath="C:\Program Files\Java\javafx-sdk-12\lib\javafx-swt.jar;C:\Program Files\Java\javafx-sdk-12\lib\javafx.swing.jar;C:\Program Files\Java\javafx-sdk-12\lib\javafx.web.jar;C:\Program Files\Java\javafx-sdk-12\lib\javafx.fxml.jar;C:\Program Files\Java\javafx-sdk-12\lib\javafx.graphics.jar;C:\Program Files\Java\javafx-sdk-12\lib\javafx.base.jar;C:\Program Files\Java\javafx-sdk-12\lib\javafx.media.jar;C:\Program Files\Java\javafx-sdk-12\lib\javafx.controls.jar" destdir="doc" doctitle="Calculator" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="proz.calc" source="11" sourcefiles="src/module-info.java" sourcepath="src" splitindex="true" use="true" version="true"/>
-    </target>
-</project>
