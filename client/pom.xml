@@ -43,6 +43,11 @@
 		    <artifactId>jersey-hk2</artifactId>
 		    <version>2.28</version>
 		</dependency>
+		<dependency>
+	        <groupId>javax.activation</groupId>
+	        <artifactId>activation</artifactId>
+	        <version>1.1.1</version>
+	    </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -53,6 +58,13 @@
                 <configuration>
                     <release>11</release>
                 </configuration>
+                <dependencies>
+	                <dependency>
+	        			<groupId>javax.activation</groupId>
+	        			<artifactId>activation</artifactId>
+	        			<version>1.1.1</version>
+	        		</dependency>
+	        	</dependencies>
             </plugin>
             <plugin>
                 <groupId>org.openjfx</groupId>
@@ -61,6 +73,13 @@
                 <configuration>
                     <mainClass>proz.webcalc.client.Main</mainClass>
                 </configuration>
+                <dependencies>
+	                <dependency>
+	        			<groupId>javax.activation</groupId>
+	        			<artifactId>activation</artifactId>
+	        			<version>1.1.1</version>
+	        		</dependency>
+	        	</dependencies>
             </plugin>
         </plugins>
     </build>
